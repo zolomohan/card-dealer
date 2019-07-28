@@ -12,7 +12,8 @@ export default class Deck extends Component {
   
     this.state = {
        deck: null,
-       drawn:[]
+       drawn:[],
+       loading: false
     }
   }
 
@@ -23,6 +24,7 @@ export default class Deck extends Component {
 
   getCard = async () => {
     try{
+      this.setState({loading: true});
       let cardResponse = await axios.get(`${API_BASE_URL}/${this.state.deck.deck_id}/draw/?count=1`);
       if(!cardResponse.data.success)
         throw new Error ('No more cards availabale in the deck!');
@@ -34,11 +36,13 @@ export default class Deck extends Component {
             id: card.code,
             image: card.image,
             name: `${card.suit} ${card.value}`
-          }
-        ]
+          },
+        ],
+        loading: false
       }))
     }
     catch(error){
+      this.setState({loading: false});
       alert(error);
     }
   }
@@ -47,9 +51,9 @@ export default class Deck extends Component {
     return (
       <div className='Deck'>
         <h1> 
-            <span className='Deck-icons Deck-spades'>&spades;</span> <span className='Deck-icons Deck-hearts'>&hearts;</span> <span className='Deck-icons Deck-clubs'>&clubs;</span> <span className='Deck-icons Deck-diams'>&diams;</span> Card Dealer <span className='Deck-icons Deck-diams'>&diams;</span> <span className='Deck-icons Deck-clubs'>&clubs;</span> <span className='Deck-icons Deck-hearts'>&hearts;</span> <span className='Deck-icons Deck-spades'>&spades;</span>
+            <span className='Deck-icons Deck-black-club'>&spades;</span> <span className='Deck-icons Deck-red-club'>&hearts;</span> <span className='Deck-icons Deck-black-club'>&clubs;</span> <span className='Deck-icons Deck-red-club'>&diams;</span> Card Dealer <span className='Deck-icons Deck-red-club'>&diams;</span> <span className='Deck-icons Deck-black-club'>&clubs;</span> <span className='Deck-icons Deck-red-club'>&hearts;</span> <span className='Deck-icons Deck-black-club'>&spades;</span>
         </h1>
-        <button onClick = {this.getCard}>Get Card</button>
+        <button onClick = {this.getCard} disabled = {this.state.loading}>Get Card</button>
         <div className='Deck-cards'>
           {this.state.drawn.map(card => <Card key={card.id} imageUrl = {card.image} name = {card.name} />)}
         </div>

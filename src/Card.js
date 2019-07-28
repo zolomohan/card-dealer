@@ -3,11 +3,8 @@ import './Card.css';
 
 export default class Card extends Component {
   constructor(props){
-  super(props);
-    let angle = Math.random() * 90 - 45,
-      xPos = Math.random() * 40 - 20,
-      yPos = Math.random() * 40 - 20;
-    this._transform = `translate(${xPos}px, ${yPos}px) rotate(${angle}deg)`;
+  	super(props);
+    this._transform = `translate(${Math.random() * 40 - 20}px, ${Math.random() * 40 - 20}px) rotate(${Math.random() * 90 - 45}deg)`;
   }
 
   render() {  

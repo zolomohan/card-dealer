@@ -12,20 +12,12 @@
     margin-top: 7%;
 }
 
-.Deck-spades{
+.Deck-black-club{
     color: aquamarine;
 }
 
-.Deck-diams{
+.Deck-red-club{
     color: #ec4d4d;
-}
-
-.Deck-hearts{
-    color: #ec4d4d;
-}
-
-.Deck-clubs{
-    color: aquamarine;
 }
 
 .Deck h1{
