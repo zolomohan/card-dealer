@@ -55,9 +55,9 @@
     border-radius: 100%;
     border: 3px solid;
     border-top-color: #36bea1;
-    border-left-color: #cccccc;
-    border-right-color: #cccccc;
-    border-bottom-color: #cccccc;
+    border-left-color: #4d4d4d;
+    border-right-color: #4d4d4d;
+    border-bottom-color: #4d4d4d;
     animation: spin 1s linear;
 }
 

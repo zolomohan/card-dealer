@@ -13,14 +13,14 @@ export default class Deck extends Component {
     this.state = {
        deck: null,
        drawn:[],
-       loading: false,
+       loading: true,
        remaining: true
     }
   }
 
   async componentDidMount(){
     let deckResponse = await axios.get(`${API_BASE_URL}/new/shuffle/?deck_count=1`);
-    this.setState({deck: deckResponse.data, drawn: []})
+    this.setState({deck: deckResponse.data, drawn: [], loading: false})
   }
 
   getCard = async () => {
