@@ -53,7 +53,7 @@ export default class Deck extends Component {
         <h1> 
             <span className='Deck-icons Deck-black-club'>&spades;</span> <span className='Deck-icons Deck-red-club'>&hearts;</span> <span className='Deck-icons Deck-black-club'>&clubs;</span> <span className='Deck-icons Deck-red-club'>&diams;</span> Card Dealer <span className='Deck-icons Deck-red-club'>&diams;</span> <span className='Deck-icons Deck-black-club'>&clubs;</span> <span className='Deck-icons Deck-red-club'>&hearts;</span> <span className='Deck-icons Deck-black-club'>&spades;</span>
         </h1>
-        <button onClick = {this.getCard} disabled = {this.state.loading}>Get Card</button>
+        <button onClick = {this.getCard} disabled = {this.state.loading}>Get Card {this.state.loading && <div className='loader'></div>} </button>
         <div className='Deck-cards'>
           {this.state.drawn.map(card => <Card key={card.id} imageUrl = {card.image} name = {card.name} />)}
         </div>
