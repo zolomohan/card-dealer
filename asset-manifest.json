@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/card-dealer/static/css/main.b2c19567.chunk.css",
+    "main.js": "/card-dealer/static/js/main.3ddd2c97.chunk.js",
+    "main.js.map": "/card-dealer/static/js/main.3ddd2c97.chunk.js.map",
+    "runtime~main.js": "/card-dealer/static/js/runtime~main.c0b5c97c.js",
+    "runtime~main.js.map": "/card-dealer/static/js/runtime~main.c0b5c97c.js.map",
+    "static/js/2.50c5cb1c.chunk.js": "/card-dealer/static/js/2.50c5cb1c.chunk.js",
+    "static/js/2.50c5cb1c.chunk.js.map": "/card-dealer/static/js/2.50c5cb1c.chunk.js.map",
+    "index.html": "/card-dealer/index.html",
+    "precache-manifest.a9665393fbac29b655d7603958e757bd.js": "/card-dealer/precache-manifest.a9665393fbac29b655d7603958e757bd.js",
+    "service-worker.js": "/card-dealer/service-worker.js",
+    "static/css/main.b2c19567.chunk.css.map": "/card-dealer/static/css/main.b2c19567.chunk.css.map"
+  }
+}
