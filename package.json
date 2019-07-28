@@ -1,6 +1,6 @@
 {
-  "homepage": "http://zolomohan.github.io/cards",
-  "name": "cards",
+  "homepage": "http://zolomohan.github.io/card-dealer",
+  "name": "card-dealer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
