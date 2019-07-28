@@ -46,11 +46,13 @@ export default class Deck extends Component {
   render() {
     return (
       <div className='Deck'>
-        <h1>Card Dealer</h1>
+        <h1> 
+            <span className='Deck-icons Deck-spades'>&spades;</span> <span className='Deck-icons Deck-hearts'>&hearts;</span> <span className='Deck-icons Deck-clubs'>&clubs;</span> <span className='Deck-icons Deck-diams'>&diams;</span> Card Dealer <span className='Deck-icons Deck-diams'>&diams;</span> <span className='Deck-icons Deck-clubs'>&clubs;</span> <span className='Deck-icons Deck-hearts'>&hearts;</span> <span className='Deck-icons Deck-spades'>&spades;</span>
+        </h1>
+        <button onClick = {this.getCard}>Get Card</button>
         <div className='Deck-cards'>
           {this.state.drawn.map(card => <Card key={card.id} imageUrl = {card.image} name = {card.name} />)}
         </div>
-        <button onClick = {this.getCard}>Get Card</button>
       </div>
     )
   }

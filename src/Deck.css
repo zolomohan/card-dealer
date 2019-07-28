@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.Deck{
+    font-family: 'Nunito', sans-serif;
+}
+
+.Deck-icons{
+    font-size: 50px;
+}
+
 .Deck-cards{
-    margin-top: 5%;
+    margin-top: 7%;
+}
+
+.Deck-spades{
+    color: aquamarine;
+}
+
+.Deck-diams{
+    color: #ec4d4d;
+}
+
+.Deck-hearts{
+    color: #ec4d4d;
+}
+
+.Deck-clubs{
+    color: aquamarine;
+}
+
+.Deck h1{
+    color: azure;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.Deck button{
+    background: none;
+    border: none;
+    color: #36bea1;
+    font-family: inherit;
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 30px;
+    border: 2px solid #36bea1;
+    border-radius: 5px;
+    transition: all 0.2s linear;
+}
+
+.Deck button:hover{
+    border-color: #207461;
+    color: #207461;
 }
