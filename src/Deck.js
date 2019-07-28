@@ -13,7 +13,8 @@ export default class Deck extends Component {
     this.state = {
        deck: null,
        drawn:[],
-       loading: false
+       loading: false,
+       remaining: true
     }
   }
 
@@ -43,7 +44,7 @@ export default class Deck extends Component {
     }
     catch(error){
       this.setState({loading: false});
-      alert(error);
+      this.setState({remaining: false})
     }
   }
 
@@ -53,7 +54,15 @@ export default class Deck extends Component {
         <h1> 
             <span className='Deck-icons Deck-black-club'>&spades;</span> <span className='Deck-icons Deck-red-club'>&hearts;</span> <span className='Deck-icons Deck-black-club'>&clubs;</span> <span className='Deck-icons Deck-red-club'>&diams;</span> Card Dealer <span className='Deck-icons Deck-red-club'>&diams;</span> <span className='Deck-icons Deck-black-club'>&clubs;</span> <span className='Deck-icons Deck-red-club'>&hearts;</span> <span className='Deck-icons Deck-black-club'>&spades;</span>
         </h1>
-        <button onClick = {this.getCard} disabled = {this.state.loading}>Get Card {this.state.loading && <div className='loader'></div>} </button>
+        {this.state.remaining 
+            ?  <button 
+                onClick = {this.getCard} 
+                disabled = {this.state.loading}
+               >
+                   Get Card {this.state.loading && <div className='loader'></div>} 
+               </button>
+
+            : <h1>No More Cards</h1>}
         <div className='Deck-cards'>
           {this.state.drawn.map(card => <Card key={card.id} imageUrl = {card.image} name = {card.name} />)}
         </div>
